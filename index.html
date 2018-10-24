@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Vélo V Lyon, location de vélos en libre service Lyon"/>
+		<meta name="keywords" content="Vélo V, Lyon, Location de vélo, Libre service, cyclable, liberté, écologique, piste cyclable, liberté "/>
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:url" content="http://velov-lyon.sailtheweb.com/"/>
+		<meta name="site" content="@velov-lyon.sailtheweb.com"/>
+		<meta property="og:title" content="Vélo V - Location de vélos en libre service"/>
+		<meta property="og:description" content="Vélo V - Location de vélos en libre service dans la ville de lyon"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="http://velov-lyon.sailtheweb.com/images/logo-velov.png"/>
+		<meta property="og:url" content="velov-lyon.sailtheweb.com"/>
+		<title>Vélo'v Lyon</title>
+		<link rel="icon" type="image/ico" href="images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<header id="barre">
+			<div id="logoVelo">
+				<img src="images/logo-velov.png" alt="Logo Vélo'V Lyon" title="Logo Vélo'V Lyon"/>
+			</div>
+			<h1>Location de vélos</h1>
+			<div id="logoLyon">
+				<img src="images/logo-gdlyon.png" alt="Logo métropole Lyon" title="Logo métropole Lyon"/>
+			</div>
+		</header>
+
+		<section id="diaporama">
+			<div id="carrousel">
+	    		<img class="imgCarrousel" src="images/velo1.jpeg" alt="présentation carte"/>
+	    		<img class="imgCarrousel" src="images/velo2.jpg" alt="présentation réservation"/>
+	    		<img class="imgCarrousel" src="images/velo3.jpg" alt="présentation prise vélo"/>
+			</div>
+			<div class="boutonDiapo" id="precedent">
+				<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+			</div>
+    		<div class="boutonDiapo" id="suivant">
+    			<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+    		</div>
+		</section>
+
+		<section id="carteVelo">
+
+			<div id="mapContainer">
+				<div id="map"></div>
+			</div>
+
+			<div id="schemaVelo">
+				<img src="images/velov_description.jpg" alt="Description Vélo" title="Description Vélo"/>
+			</div>
+   			
+			<div id="blocDroite">
+				<div>
+					<h3>Informations de la station selectionnée</h3>
+					<div id="infoStation">
+						<div>La station identifiée <div id="nomStation"></div></div>
+						<div>située à l'adresse <div id="adresseStation"></div></div>	
+						<div>est actuellement <span id="statusStation"></span></div>
+						<div>et dispose de <div id="nbVelo"></div> vélo(s) disponible(s)</div>
+					</div>
+				</div>
+
+				<div id="zoneCanvas">
+					<p>Votre signature :</p>
+					<div id="canvasDiv">
+						<canvas id="canvas"></canvas>
+						<div>
+							<button id ="boutonReserver">Réserver</button>
+							<button id="clear">Effacer</button>
+						</div>
+					</div>
+				</div>		
+			</div>	
+		</section>
+
+		<section id="statutResa">
+			<div id="blocBas">
+				<div id="bike1">
+					<img src="images/bike1.png" alt="Image velo course" title="Image vélo course"/>
+				</div>
+				<div id="etatReservation"></div>
+				<div id="bike2">
+					<img src="images/bike2.png" alt="Image vélo panier" title="Image vélo panier"/>
+				</div>	
+			</div>
+			<div id="annuler">
+				<button id ="boutonAnnuler">Annuler la réservation</button>
+			</div>
+		</section>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/Slider.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA51WQhNUScdgXw2n10l0xnPY4a5SpbMzE"></script>
+		<script src="js/Map.js"></script>
+		<script src="js/markerclusterer.js"></script>
+		<script src="js/Reservation.js"></script>
+		<script src="js/Canvas.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
